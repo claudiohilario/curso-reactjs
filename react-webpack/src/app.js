@@ -1,5 +1,7 @@
-function sum(val1, val2) {
-    return val1 + val2;
-}
+const React = require('react');
 
-module.exports = sum;
+function Title(){
+    return React.createElement('h1', null, 'Titulo');
+};
+
+module.exports = Title;

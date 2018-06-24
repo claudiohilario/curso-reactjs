@@ -71,4 +71,8 @@ $ npm install webpack-cli -D
 $ webpack-dev-server
 ```
 
-
+## Criar aplicação em ReactJs
+### Instalar dependências (react e react-dom)
+```cli
+$ npm install --save react react-dom
+```
