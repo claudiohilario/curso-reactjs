@@ -1,7 +1,7 @@
-const React = require('react');
+import React from 'react';
 
 function Title(){
     return React.createElement('h1', null, 'Titulo');
 };
 
-module.exports = Title;
+export default Title;
