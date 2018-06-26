@@ -81,3 +81,10 @@ $ npm install --save react react-dom
 ```cli
 $ npm install --save-dev babel-core babel-loader babel-preset-es2015 babel-preset-stage-0
 ```
+
+## Utilizar React hot Loader
+
+## Instalação
+```cli
+$ npm install react-hot-loader --save-dev
+```

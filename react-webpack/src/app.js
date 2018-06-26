@@ -1,7 +1,7 @@
 import React from 'react';
 
-function Title(){
-    return React.createElement('h1', null, 'Titulo');
+function App(){
+    return <h1>Aplicação1</h1>;
 };
 
-export default Title;
+export default App;
