@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Title from './Title';
+import Square from './Square';
 
 class App extends Component {
 
@@ -7,7 +8,7 @@ class App extends Component {
   render() {
     return (
       <div>
-        <Title />
+        {['blue', 'red', 'green'].map((square) => (<Square key={square} color={square} />)) }
       </div>
     ); 
   }
