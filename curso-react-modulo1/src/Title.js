@@ -1,6 +1,11 @@
 import React, { Component } from 'react';
 
-class Title extends Component {    
+class Title extends Component {
+
+    static defaultProps = {
+        name: 'Xico'
+     };
+
     render() {
         console.log(this.props);
 
