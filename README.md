@@ -88,3 +88,75 @@ $ npm install --save-dev babel-core babel-loader babel-preset-es2015 babel-prese
 ```cli
 $ npm install react-hot-loader --save-dev
 ```
+
+# EXEMPLOS
+## Exemplo Simples com estados e funções puras (button.js e square.js)
+
+App.js
+```js 
+import React, { Component } from 'react';
+import Square from './square';
+import Button from './buttom';
+
+class App extends Component {
+  constructor(props) {
+    super();
+    this.state = {
+      color: 'green'
+    }
+  }
+  
+  render() {
+    return (
+      <div>
+        <Square color={this.state.color} />
+        {['red', 'green', 'blue'].map((color) => (
+          <Button 
+            key={color}
+            handleClick={() => this.setState({ color })} >
+            {color}
+          </Button>
+        ))}          
+      </div>
+    ); 
+  }
+}
+
+export default App;
+```
+
+square.js
+
+```js 
+import React from 'react';
+
+const Square = ({ color }) => (
+  <div style={{
+    background: color,
+    height: '100px',
+    width: '100px',
+  }}>
+  </div>
+);
+
+Square.defaultProps = {
+  color: 'red',
+}
+
+export default Square;
+```
+
+button.js
+```js 
+import React from 'react';
+
+const Buttom = ({children, handleClick}) => (
+  <button onClick={handleClick}>
+    {children}
+  </button>
+)
+
+export default Buttom;
+```
+
+
