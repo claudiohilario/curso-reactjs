@@ -350,3 +350,21 @@ class App extends Component {
 export default App;
 
 ```
+### Textarea
+```js
+import React, {Component} from 'react';
+
+class App extends Component {
+  render() {
+    return (
+        <div>
+          <form>
+            <textarea defaultValue={'Teste valor default\ne quebra de linha'} />
+          </form>
+        </div>
+    )
+  }
+}
+
+export default App;
+```
