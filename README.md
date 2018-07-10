@@ -201,6 +201,7 @@ export default Button;
 ```
 ## Formulários
 
+
 ### Exemplo input
 ```js 
 import React, {Component} from 'react';
@@ -367,4 +368,39 @@ class App extends Component {
 }
 
 export default App;
+```
+### Eventos para componentes de formulário
+* onChange
+* onInput
+* onSubmit
+
+```js 
+import React, {Component} from 'react';
+
+class App extends Component {
+  render() {
+    return (
+        <div>
+          <form 
+          onSubmit={(e) => {
+            e.preventDefault();
+              console.log('event', e)
+            }}
+            
+            onChange={(e) => {
+              console.log('name', e.target.name);
+              console.log('value', e.target.value);
+            }}>
+            <input type='name' name='name'/>
+            <input type='email' name='email'/>
+            <textarea defaultValue={'Teste valor default\ne quebra de linha'} />
+            <button type='submit'>Enviar</button>
+          </form>
+        </div>
+    )
+  }
+}
+
+export default App;
+
 ```
