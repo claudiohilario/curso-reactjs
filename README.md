@@ -96,7 +96,7 @@ App.js
 ```js 
 import React, { Component } from 'react';
 import Square from './square';
-import Button from './buttom';
+import Button from './button';
 
 class App extends Component {
   constructor(props) {
@@ -150,13 +150,52 @@ button.js
 ```js 
 import React from 'react';
 
-const Buttom = ({children, handleClick}) => (
+const Button = ({children, handleClick}) => (
   <button onClick={handleClick}>
     {children}
   </button>
 )
 
-export default Buttom;
+export default Button;
 ```
+## propTypes
+Premite validar as propriedades, de um determinado componente.
+Mais info: https://reactjs.org/docs/typechecking-with-proptypes.html#proptypes
+App.js
+```js
+import React, { Component } from 'react';
+import Button from './button';
+
+class App extends Component {
+  render() {
+    return (
+      <div>
+        <Button handleClick={() => console.log('Clique')}>
+          Clique aqui
+        </Button>
+      </div>
+    ); 
+  }
+}
+
+export default App;
+```
+button.js
+```js
+import React from 'react';
+import PropTypes from 'prop-types';
 
 
+const Button = ({ children, handleClick }) => (
+  <button onClick={handleClick}>
+    {children}
+  </button>
+)
+
+Buttom.propTypes = {
+  handleClick: PropTypes.func.isRequired,
+}
+
+export default Button;
+
+```
